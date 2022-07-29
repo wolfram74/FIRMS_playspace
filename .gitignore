@@ -1,3 +1,5 @@
+secrets.txt
+data/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -104,7 +106,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
-env/
+pyenv/
 venv/
 ENV/
 env.bak/

@@ -1,0 +1,16 @@
+step1:
+	download the bulk data from FIRMS
+	https://firms.modaps.eosdis.nasa.gov/active_fire/
+	two months collection should be fine first go
+	since I want ukraine /probably/ europe, but maybe it's in the asia batch
+step2:
+	check long-lat vs ukraine location to see if it's the places I want
+Step3:
+	start parsing out the incidents more agressively focusing just on the region of interest
+step4:
+	see what a 2 day rolling average looks like
+step5:
+	just go buck wild.
+
+
+wget -e robots=off -m -np -R .html,.tmp -nH --cut-dirs=4 "https://nrt3.modaps.eosdis.nasa.gov/api/v2/content/archives/FIRMS/modis-c6.1/" --header "Authorization: Bearer INSERT_YOUR_TOKEN_HERE" -P ./data
