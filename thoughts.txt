@@ -14,3 +14,32 @@ step5:
 
 
 wget -e robots=off -m -np -R .html,.tmp -nH --cut-dirs=4 "https://nrt3.modaps.eosdis.nasa.gov/api/v2/content/archives/FIRMS/modis-c6.1/" --header "Authorization: Bearer INSERT_YOUR_TOKEN_HERE" -P ./data
+
+since I have MODIS data
+https://www.earthdata.nasa.gov/learn/find-data/near-real-time/firms/mcd14dl-nrt#ed-firms-attributes
+
+fields:
+	latitude+ longitude: pretty obv
+	brightness: apparently a temperature rating, interesting
+	scan+track: while the goal is a 1km square pixel, acquisition process deforms that slightly
+	acq_date+acq_time: yeppers
+	satellite: aqua or terra sats
+	confidence: 0-100 confidence percentage
+	version: looks like some collection types
+	bright_t31:another temperature reading 
+	frp: power output
+	daynight: whether or not it's day night
+
+location data:
+	https://worldpopulationreview.com/countries/ukraine/location
+	center is put at 48.4 n and 31.2 E
+	E bounds: 22.25 to 40.25
+	N bounds: 52.3, 45.3
+
+	http://bboxfinder.com/
+	seems to agree with that, so treating ukraine like a rectangle for the sake of argument
+	will grab a lot of moldova, some romania, belarus and poland.
+
+
+thoughts:
+
