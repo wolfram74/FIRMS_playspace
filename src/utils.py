@@ -83,4 +83,3 @@ def get_data_files(region='Europe'):
 	files = os.listdir(prefix)
 	return list(map(lambda x: os.path.join(prefix, x), files))
 
-#  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
